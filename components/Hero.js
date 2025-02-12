@@ -32,7 +32,7 @@ export default function Hero() {
                 className={`${isVisible ? "absolute z-10 pointer-events-auto" : "fixed z-[-1] pointer-events-none"
                     } ${isVisible
                         ? "top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-                        : "top-0 left-[-60] scale-[0.4]"
+                        : "top-0 left-0 scale-[0.4]"
                     }`}
             >
                 <Image
@@ -48,7 +48,7 @@ export default function Hero() {
             {/* Invisible Clickable Logo */}
             {!isVisible && (
                 <div
-                    className="fixed top-12 left-6 z-50 cursor-pointer opacity-0 visibility-hidden"
+                    className="fixed top-12 left-20 z-50 cursor-pointer opacity-0"
                     onClick={scrollToTop}
                 >
                     <Image

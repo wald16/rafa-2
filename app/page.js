@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import React, { useState } from "react";
 import { useInView } from "react-intersection-observer";
 import Hero from "../components/Hero";
+import Image from "next/image";
 
 export default function Home() {
     const [showTransform, setShowTransform] = useState(true);
@@ -175,10 +176,13 @@ export default function Home() {
                     <div className="team-container grid grid-cols-4 gap-8">
                         {/* Fila 1 */}
                         <div className="team-member text-left">
-                            <img
+                            <Image
                                 src="/images/person1.jpg"
                                 alt="Cristian Pastrian"
                                 className="w-full rounded-lg mb-4"
+                                width={300}
+                                height={300}
+
                             />
                             <h3 className="text-red-500 text-2xl font-bold mb-2">Cristian Pastrian</h3>
                             <p className="text-gray-300 text-base leading-relaxed">
@@ -186,10 +190,13 @@ export default function Home() {
                             </p>
                         </div>
                         <div className="team-member text-left">
-                            <img
+                            <Image
                                 src="/images/person2.jpg"
                                 alt="Paulo Lorems"
                                 className="w-full rounded-lg mb-4"
+                                width={300}
+                                height={300}
+
                             />
                             <h3 className="text-red-500 text-2xl font-bold mb-2">Paulo Lorems</h3>
                             <p className="text-gray-300 text-base leading-relaxed">
@@ -197,10 +204,12 @@ export default function Home() {
                             </p>
                         </div>
                         <div className="team-member text-left">
-                            <img
+                            <Image
                                 src="/images/person3.jpg"
                                 alt="Rafael Pastrian"
                                 className="w-full rounded-lg mb-4"
+                                width={300}
+                                height={300}
                             />
                             <h3 className="text-red-500 text-2xl font-bold mb-2">Rafael Pastrian</h3>
                             <p className="text-gray-300 text-base leading-relaxed">
@@ -208,10 +217,12 @@ export default function Home() {
                             </p>
                         </div>
                         <div className="team-member text-left">
-                            <img
+                            <Image
                                 src="/images/person4.jpg"
                                 alt="Sofia Martinez"
                                 className="w-full rounded-lg mb-4"
+                                width={300}
+                                height={300}
                             />
                             <h3 className="text-red-500 text-2xl font-bold mb-2">Sofia Martinez</h3>
                             <p className="text-gray-300 text-base leading-relaxed">
@@ -220,10 +231,12 @@ export default function Home() {
                         </div>
                         {/* Fila 2 */}
                         <div className="team-member text-left">
-                            <img
+                            <Image
                                 src="/images/person5.jpg"
                                 alt="Luis Gutierrez"
                                 className="w-full rounded-lg mb-4"
+                                width={300}
+                                height={300}
                             />
                             <h3 className="text-red-500 text-2xl font-bold mb-2">Luis Gutierrez</h3>
                             <p className="text-gray-300 text-base leading-relaxed">
@@ -231,10 +244,12 @@ export default function Home() {
                             </p>
                         </div>
                         <div className="team-member text-left">
-                            <img
+                            <Image
                                 src="/images/person6.jpg"
                                 alt="Maria Lopez"
                                 className="w-full rounded-lg mb-4"
+                                width={300}
+                                height={300}
                             />
                             <h3 className="text-red-500 text-2xl font-bold mb-2">Maria Lopez</h3>
                             <p className="text-gray-300 text-base leading-relaxed">
@@ -242,10 +257,12 @@ export default function Home() {
                             </p>
                         </div>
                         <div className="team-member text-left">
-                            <img
+                            <Image
                                 src="/images/person7.jpg"
                                 alt="Juan Perez"
                                 className="w-full rounded-lg mb-4"
+                                width={300}
+                                height={300}
                             />
                             <h3 className="text-red-500 text-2xl font-bold mb-2">Juan Perez</h3>
                             <p className="text-gray-300 text-base leading-relaxed">
@@ -253,10 +270,12 @@ export default function Home() {
                             </p>
                         </div>
                         <div className="team-member text-left">
-                            <img
+                            <Image
                                 src="/images/person8.jpg"
                                 alt="Ana Torres"
                                 className="w-full rounded-lg mb-4"
+                                width={300}
+                                height={300}
                             />
                             <h3 className="text-red-500 text-2xl font-bold mb-2">Ana Torres</h3>
                             <p className="text-gray-300 text-base leading-relaxed">
