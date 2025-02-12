@@ -43,7 +43,7 @@ export default function Home() {
                     loop
                     muted
                     playsInline
-                    className="absolute top-0 left-0 w-full h-screen object-cover z-10"
+                    className="absolute top-0 left-0 h-[50vh] w-full md:h-screen object-cover z-10"
                 >
                     <source src="/videos/background4.mp4" type="video/mp4" />
                     Tu navegador no soporta videos.
@@ -52,7 +52,7 @@ export default function Home() {
             </div>
 
             {/* Section with Animated Text for Transform */}
-            <div ref={transformRef} className="relative h-screen">
+            <div ref={transformRef} className="relative h-[50vh] md:h-screen">
                 <video
                     autoPlay
                     loop
@@ -63,7 +63,7 @@ export default function Home() {
                     <source src="/videos/background5.mp4" type="video/mp4" />
                     Tu navegador no soporta videos.
                 </video>
-                <div className="relative z-10 flex items-center justify-center h-full">
+                <div className="relative z-10 flex items-center justify-center h-[50vh] md:h-full">
                     <AnimatePresence mode="wait">
                         {showTransform ? (
                             <motion.div
@@ -97,7 +97,7 @@ export default function Home() {
             </div>
 
             {/* Section with Animated Text for Enhance */}
-            <div ref={enhanceRef} className="relative h-screen">
+            <div ref={enhanceRef} className="relative h-[50vh] md:h-screen">
                 <video
                     autoPlay
                     loop
@@ -155,7 +155,7 @@ export default function Home() {
                     </p>
                 </div>
             </div>
-            <div className="relative h-screen">
+            <div className="relative h-[50vh] md:h-screen">
                 <video
                     autoPlay
                     loop
