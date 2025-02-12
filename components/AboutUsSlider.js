@@ -57,6 +57,7 @@ export default function AboutUsSlider() {
                 <img
                     src={teamMembers[currentIndex].image}
                     className="w-32 h-32 object-cover rounded-full mb-4 border-4 border-red-600"
+                    alt=''
                 />
                 <h3 className="text-2xl text-white font-bold">
                     {teamMembers[currentIndex].name}

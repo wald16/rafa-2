@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import React, { useState } from "react";
 import { useInView } from "react-intersection-observer";
 import Hero from "../components/Hero";
-import AboutUsSlider from "../components/AboutUsSlider";
 
 export default function Home() {
     const [showTransform, setShowTransform] = useState(true);
