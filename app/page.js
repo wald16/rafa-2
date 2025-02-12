@@ -44,7 +44,7 @@ export default function Home() {
                     playsInline
                     className="absolute top-0 left-0 w-full h-screen object-cover z-10"
                 >
-                    <source src="/videos/background4.mp4" type="video/mp4" />
+                    <source src="https://drive.google.com/file/d/1ukImnqm382vtJqPJtu7Pz1eHyenvLL11/view?usp=sharing" type="video/mp4" />
                     Tu navegador no soporta videos.
                 </video>
                 <Hero />
@@ -59,7 +59,7 @@ export default function Home() {
                     playsInline
                     className="absolute top-0 left-0 w-full h-full object-cover -z-10"
                 >
-                    <source src="/videos/background2.mp4" type="video/mp4" />
+                    <source src="https://drive.google.com/file/d/1H6qRbsmTq_MDPgHMoV950r_QpFPp_D-b/view?usp=sharing" type="video/mp4" />
                     Tu navegador no soporta videos.
                 </video>
                 <div className="relative z-10 flex items-center justify-center h-full">
@@ -104,7 +104,7 @@ export default function Home() {
                     playsInline
                     className="absolute top-0 left-0 w-full h-full object-cover -z-10"
                 >
-                    <source src="/videos/background3.mp4" type="video/mp4" />
+                    <source src="https://drive.google.com/file/d/1iPnY9BgOiTEshWXMPgFlS1Cgzs0Lgts3/view?usp=sharing" type="video/mp4" />
                     Tu navegador no soporta videos.
                 </video>
                 <div className="relative z-10 flex items-center justify-center h-full">
