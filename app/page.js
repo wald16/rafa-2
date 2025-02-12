@@ -59,7 +59,7 @@ export default function Home() {
                     playsInline
                     className="absolute top-0 left-0 w-full h-full object-cover -z-10"
                 >
-                    <source src="/videos/background2.mp4" type="video/mp4" />
+                    <source src="/videos/background5.mp4" type="video/mp4" />
                     Tu navegador no soporta videos.
                 </video>
                 <div className="relative z-10 flex items-center justify-center h-full">
@@ -140,6 +140,33 @@ export default function Home() {
                 </div>
             </div>
 
+            {/* Red Section with Text */}
+            <div className="relative bg-red-600 py-10 px-6 text-left">
+                <div className="container mx-4 h-80">
+                    <h2 className="text-white text-5xl font-bold leading-none">
+                        Lorem Ipsum amb<br />
+                        la rabla al consequat
+                    </h2>
+                    <p className="text-black text-xl font-black mt-4">
+                        Lorem ipsum amb el rabla magnis<br />
+                        dis parturient montes, nascetur<br />
+                        ridiculus mus donec quam felis.
+                    </p>
+                </div>
+            </div>
+            <div className="relative h-screen">
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+                >
+                    <source src="/videos/background6.mp4" type="video/mp4" />
+                    Tu navegador no soporta videos.
+                </video>
+            </div>
+
             {/* Diagonal Split Background with About Us */}
             <div className="relative min-h-screen">
                 {/* About Us Content */}
@@ -152,9 +179,7 @@ export default function Home() {
                     </p>
 
                     {/* About Us Slider */}
-                    <div className="relative min-h-screen">
-
-                    </div>
+                    <div className="relative min-h-screen"></div>
                 </div>
             </div>
         </div>

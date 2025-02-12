@@ -12,6 +12,13 @@ export default function Hero() {
         setIsVisible(inView);
     }, [inView]);
 
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // Añade un efecto de desplazamiento suave
+        });
+    };
+
     return (
         <section
             ref={ref}
@@ -30,7 +37,8 @@ export default function Hero() {
                     alt="CR Group Logo"
                     width={300}
                     height={150}
-                    className="object-contain"
+                    className="object-contain cursor-pointer" // Añade cursor-pointer para indicar que es clickeable
+                    onClick={scrollToTop} // Vincula la función de scroll al evento onClick
                 />
             </div>
         </section>

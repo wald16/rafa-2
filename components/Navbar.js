@@ -1,13 +1,21 @@
 'use client';
 
-import { useState } from "react";
-import Image from "next/image";
+import { useState, useEffect } from "react";
+import Image from "next/image"; // Import Image for the close button image
 import { motion } from "framer-motion";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
+    const [isClient, setIsClient] = useState(false);
 
-    // Animaciones con Framer Motion
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
+
+    if (!isClient) {
+        return null;
+    }
+
     const menuVariants = {
         open: {
             x: 0,
@@ -42,9 +50,9 @@ export default function Navbar() {
 
     return (
         <div className="absolute top-0 right-0 z-30">
-            {/* Botón de menú hamburguesa */}
+            {/* Hamburger Button */}
             <motion.div
-                className="p-4 cursor-pointer"
+                className="p-4 cursor-pointer z-40"
                 onClick={() => setIsOpen(!isOpen)}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
@@ -63,50 +71,46 @@ export default function Navbar() {
                 ></div>
             </motion.div>
 
-            {/* Menú lateral desplegable */}
+            {/* Side Menu */}
             <motion.div
-                className="fixed top-0 right-0 w-2/3 h-full bg-black bg-opacity-90 p-6"
+                className="fixed top-0 right-0 w-2/6 h-full bg-black bg-opacity-90 flex flex-col justify-center items-start pl-10"
                 variants={menuVariants}
                 animate={isOpen ? "open" : "closed"}
                 initial="closed"
             >
-                {/* Logo en el menú */}
-                <div className="mb-8">
-                    <Image
-                        src="/images/logo.png"
-                        alt="CR Group Logo"
-                        width={120}
-                        height={60}
-                        className="cursor-pointer"
-                    />
-                </div>
-
-                {/* Enlaces del menú */}
-                <nav className="flex flex-col space-y-6 text-white text-lg">
-                    {["Inicio", "Portafolio", "Servicios", "Contacto"].map(
-                        (link, index) => (
-                            <motion.a
-                                key={link}
-                                href={`/${link.toLowerCase()}`}
-                                variants={linkVariants}
-                                custom={index}
-                                className="hover:text-primary"
-                            >
-                                {link}
-                            </motion.a>
-                        )
-                    )}
-                </nav>
-
-                {/* Botón de cerrar */}
+                {/* Close Button */}
                 <motion.div
-                    className="absolute top-4 right-4 cursor-pointer text-white text-2xl"
+                    className="absolute top-4 right-5 cursor-pointer"
                     onClick={() => setIsOpen(false)}
-                    whileHover={{ scale: 1.2 }}
-                    whileTap={{ scale: 0.8 }}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
                 >
-                    &times;
+                    <Image
+                        src="/images/xcierre.png" // Replace with your uploaded image path
+                        alt="Close"
+                        width={40}
+                        height={40}
+                    />
                 </motion.div>
+
+                {/* Links */}
+                <nav className="flex flex-col items-start space-y-8">
+                    {["We do", "Us", "Contact"].map((link, index) => (
+                        <motion.a
+                            key={link}
+                            href={`/${link.toLowerCase().replace(/\s+/g, '-')}`}
+                            variants={linkVariants}
+                            custom={index}
+                            className="text-red-500 font-bold text-3xl tracking-wide cursor-pointer"
+                            style={{
+                                fontFamily: "Campton, sans-serif",
+                            }}
+                            whileHover={{ scale: 1.1, color: "#fff" }}
+                        >
+                            {link}
+                        </motion.a>
+                    ))}
+                </nav>
             </motion.div>
         </div>
     );
