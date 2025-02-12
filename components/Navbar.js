@@ -48,6 +48,14 @@ export default function Navbar() {
         }),
     };
 
+    const handleScrollToSection = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+            setIsOpen(false); // Close the menu after scrolling
+        }
+    };
+
     return (
         <div className="absolute top-0 right-0 z-30">
             {/* Hamburger Button */}
@@ -58,16 +66,13 @@ export default function Navbar() {
                 whileTap={{ scale: 0.9 }}
             >
                 <div
-                    className={`w-8 h-1 bg-white mb-2 transition-transform ${isOpen ? "rotate-45 translate-y-2.5" : ""
-                        }`}
+                    className={`w-8 h-1 bg-white mb-2 transition-transform ${isOpen ? "rotate-45 translate-y-2.5" : ""}`}
                 ></div>
                 <div
-                    className={`w-8 h-1 bg-white mb-2 ${isOpen ? "opacity-0" : "opacity-100"
-                        }`}
+                    className={`w-8 h-1 bg-white mb-2 ${isOpen ? "opacity-0" : "opacity-100"}`}
                 ></div>
                 <div
-                    className={`w-8 h-1 bg-white ${isOpen ? "-rotate-45 -translate-y-2.5" : ""
-                        }`}
+                    className={`w-8 h-1 bg-white ${isOpen ? "-rotate-45 -translate-y-2.5" : ""}`}
                 ></div>
             </motion.div>
 
@@ -95,21 +100,39 @@ export default function Navbar() {
 
                 {/* Links */}
                 <nav className="flex flex-col items-start space-y-8">
-                    {["We do", "Us", "Contact"].map((link, index) => (
-                        <motion.a
-                            key={link}
-                            href={`/${link.toLowerCase().replace(/\s+/g, '-')}`}
-                            variants={linkVariants}
-                            custom={index}
-                            className="text-red-500 font-bold text-3xl tracking-wide cursor-pointer"
-                            style={{
-                                fontFamily: "Campton, sans-serif",
-                            }}
-                            whileHover={{ scale: 1.1, color: "#fff" }}
-                        >
-                            {link}
-                        </motion.a>
-                    ))}
+                    <motion.a
+                        href="#"
+                        onClick={() => handleScrollToSection("we-do-section")}
+                        variants={linkVariants}
+                        custom={0}
+                        className="text-red-500 font-bold text-3xl tracking-wide cursor-pointer"
+                        style={{ fontFamily: "Campton, sans-serif" }}
+                        whileHover={{ scale: 1.1, color: "#fff" }}
+                    >
+                        We do
+                    </motion.a>
+                    <motion.a
+                        href="#"
+                        onClick={() => handleScrollToSection("us-section")}
+                        variants={linkVariants}
+                        custom={1}
+                        className="text-red-500 font-bold text-3xl tracking-wide cursor-pointer"
+                        style={{ fontFamily: "Campton, sans-serif" }}
+                        whileHover={{ scale: 1.1, color: "#fff" }}
+                    >
+                        Us
+                    </motion.a>
+                    <motion.a
+                        href="#"
+                        onClick={() => handleScrollToSection("contact-section")}
+                        variants={linkVariants}
+                        custom={2}
+                        className="text-red-500 font-bold text-3xl tracking-wide cursor-pointer"
+                        style={{ fontFamily: "Campton, sans-serif" }}
+                        whileHover={{ scale: 1.1, color: "#fff" }}
+                    >
+                        Contact
+                    </motion.a>
                 </nav>
             </motion.div>
         </div>

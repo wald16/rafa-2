@@ -171,7 +171,7 @@ export default function Home() {
             {/* Diagonal Split Background with About Us */}
             <div className="relative">
                 {/* Us Section */}
-                <div className="us-section bg-black py-10 px-8">
+                <div id="us-section" className="us-section bg-black py-10 px-8">
                     <h2 className="text-6xl text-red-500 font-extrabold text-left mb-8">Us</h2>
                     <div className="team-container grid grid-cols-4 gap-8">
                         {/* Fila 1 */}
