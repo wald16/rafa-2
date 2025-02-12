@@ -15,7 +15,7 @@ export default function Hero() {
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
-            behavior: 'smooth' // Añade un efecto de desplazamiento suave
+            behavior: 'smooth' // Smooth scrolling
         });
     };
 
@@ -29,18 +29,37 @@ export default function Hero() {
 
             {/* Logo */}
             <div
-                className={`${isVisible ? "absolute z-10" : "fixed z-[-1]"
-                    } ${isVisible ? "top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" : "top-0 left-[-60] scale-[0.4]"}`}
+                className={`${isVisible ? "absolute z-10 pointer-events-auto" : "fixed z-[-1] pointer-events-none"
+                    } ${isVisible
+                        ? "top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                        : "top-0 left-[-60] scale-[0.4]"
+                    }`}
             >
                 <Image
                     src="/images/logo-blanco.png"
                     alt="CR Group Logo"
                     width={300}
                     height={150}
-                    className="object-contain cursor-pointer" // Añade cursor-pointer para indicar que es clickeable
-                    onClick={scrollToTop} // Vincula la función de scroll al evento onClick
+                    className="object-contain cursor-pointer"
+                    onClick={scrollToTop}
                 />
             </div>
+
+            {/* Invisible Clickable Logo */}
+            {!isVisible && (
+                <div
+                    className="fixed top-12 left-6 z-50 cursor-pointer opacity-0 visibility-hidden"
+                    onClick={scrollToTop}
+                >
+                    <Image
+                        src="/images/logo-blanco.png"
+                        alt="CR Group Logo"
+                        width={130}
+                        height={150}
+                        className="object-contain"
+                    />
+                </div>
+            )}
         </section>
     );
 }
