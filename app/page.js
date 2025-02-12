@@ -168,19 +168,109 @@ export default function Home() {
             </div>
 
             {/* Diagonal Split Background with About Us */}
-            <div className="relative min-h-screen">
-                {/* About Us Content */}
-                <div className="relative z-10 container mx-auto py-20 px-6 text-center">
-                    <h2 className="text-5xl font-extrabold text-white">
-                        About Us
-                    </h2>
-                    <p className="mt-6 text-lg text-gray-200 max-w-2xl mx-auto">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                    </p>
-
-                    {/* About Us Slider */}
-                    <div className="relative min-h-screen"></div>
+            <div className="relative">
+                {/* Us Section */}
+                <div className="us-section bg-black py-10 px-8">
+                    <h2 className="text-6xl text-red-500 font-extrabold text-left mb-8">Us</h2>
+                    <div className="team-container grid grid-cols-4 gap-8">
+                        {/* Fila 1 */}
+                        <div className="team-member text-left">
+                            <img
+                                src="/images/person1.jpg"
+                                alt="Cristian Pastrian"
+                                className="w-full rounded-lg mb-4"
+                            />
+                            <h3 className="text-red-500 text-2xl font-bold mb-2">Cristian Pastrian</h3>
+                            <p className="text-gray-300 text-base leading-relaxed">
+                                Lorem ipsum amb al rabia magnis dis parturient montes, nascetur ridiculus mus.
+                            </p>
+                        </div>
+                        <div className="team-member text-left">
+                            <img
+                                src="/images/person2.jpg"
+                                alt="Paulo Lorems"
+                                className="w-full rounded-lg mb-4"
+                            />
+                            <h3 className="text-red-500 text-2xl font-bold mb-2">Paulo Lorems</h3>
+                            <p className="text-gray-300 text-base leading-relaxed">
+                                Lorem ipsum amb al rabia magnis dis parturient montes, nascetur ridiculus mus.
+                            </p>
+                        </div>
+                        <div className="team-member text-left">
+                            <img
+                                src="/images/person3.jpg"
+                                alt="Rafael Pastrian"
+                                className="w-full rounded-lg mb-4"
+                            />
+                            <h3 className="text-red-500 text-2xl font-bold mb-2">Rafael Pastrian</h3>
+                            <p className="text-gray-300 text-base leading-relaxed">
+                                Lorem ipsum amb al rabia magnis dis parturient montes, nascetur ridiculus mus.
+                            </p>
+                        </div>
+                        <div className="team-member text-left">
+                            <img
+                                src="/images/person4.jpg"
+                                alt="Sofia Martinez"
+                                className="w-full rounded-lg mb-4"
+                            />
+                            <h3 className="text-red-500 text-2xl font-bold mb-2">Sofia Martinez</h3>
+                            <p className="text-gray-300 text-base leading-relaxed">
+                                Lorem ipsum amb al rabia magnis dis parturient montes, nascetur ridiculus mus.
+                            </p>
+                        </div>
+                        {/* Fila 2 */}
+                        <div className="team-member text-left">
+                            <img
+                                src="/images/person5.jpg"
+                                alt="Luis Gutierrez"
+                                className="w-full rounded-lg mb-4"
+                            />
+                            <h3 className="text-red-500 text-2xl font-bold mb-2">Luis Gutierrez</h3>
+                            <p className="text-gray-300 text-base leading-relaxed">
+                                Lorem ipsum amb al rabia magnis dis parturient montes, nascetur ridiculus mus.
+                            </p>
+                        </div>
+                        <div className="team-member text-left">
+                            <img
+                                src="/images/person6.jpg"
+                                alt="Maria Lopez"
+                                className="w-full rounded-lg mb-4"
+                            />
+                            <h3 className="text-red-500 text-2xl font-bold mb-2">Maria Lopez</h3>
+                            <p className="text-gray-300 text-base leading-relaxed">
+                                Lorem ipsum amb al rabia magnis dis parturient montes, nascetur ridiculus mus.
+                            </p>
+                        </div>
+                        <div className="team-member text-left">
+                            <img
+                                src="/images/person7.jpg"
+                                alt="Juan Perez"
+                                className="w-full rounded-lg mb-4"
+                            />
+                            <h3 className="text-red-500 text-2xl font-bold mb-2">Juan Perez</h3>
+                            <p className="text-gray-300 text-base leading-relaxed">
+                                Lorem ipsum amb al rabia magnis dis parturient montes, nascetur ridiculus mus.
+                            </p>
+                        </div>
+                        <div className="team-member text-left">
+                            <img
+                                src="/images/person8.jpg"
+                                alt="Ana Torres"
+                                className="w-full rounded-lg mb-4"
+                            />
+                            <h3 className="text-red-500 text-2xl font-bold mb-2">Ana Torres</h3>
+                            <p className="text-gray-300 text-base leading-relaxed">
+                                Lorem ipsum amb al rabia magnis dis parturient montes, nascetur ridiculus mus.
+                            </p>
+                        </div>
+                    </div>
                 </div>
+
+
+
+
+
+
             </div>
         </div>
     );
