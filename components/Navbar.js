@@ -48,13 +48,24 @@ export default function Navbar() {
         }),
     };
 
-    const handleScrollToSection = (sectionId) => {
+    const handleScrollToSection = (sectionId, event) => {
+        // Prevent the default action of the anchor tag
+        event.preventDefault();
+
         const section = document.getElementById(sectionId);
         if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
+            const offset = 0; // Adjust based on the height of your navbar
+            const top = section.offsetTop - offset; // Use absolute offset
+
+            window.scrollTo({
+                top,
+                behavior: 'smooth',
+            });
+
             setIsOpen(false); // Close the menu after scrolling
         }
     };
+
 
     return (
         <div className="fixed top-0 right-0 z-30">
@@ -102,7 +113,7 @@ export default function Navbar() {
                 <nav className="flex flex-col items-start space-y-8">
                     <motion.a
                         href="#"
-                        onClick={() => handleScrollToSection("we-do-section")}
+                        onClick={() => handleScrollToSection("we-do-section", event)}
                         variants={linkVariants}
                         custom={0}
                         className="text-red-500 font-bold text-3xl tracking-wide cursor-pointer"
@@ -113,7 +124,7 @@ export default function Navbar() {
                     </motion.a>
                     <motion.a
                         href="#"
-                        onClick={() => handleScrollToSection("us-section")}
+                        onClick={() => handleScrollToSection("us-section", event)}
                         variants={linkVariants}
                         custom={1}
                         className="text-red-500 font-bold text-3xl tracking-wide cursor-pointer"
@@ -124,7 +135,7 @@ export default function Navbar() {
                     </motion.a>
                     <motion.a
                         href="#"
-                        onClick={() => handleScrollToSection("contact-section")}
+                        onClick={() => handleScrollToSection("contact-section", event)}
                         variants={linkVariants}
                         custom={2}
                         className="text-red-500 font-bold text-3xl tracking-wide cursor-pointer"
