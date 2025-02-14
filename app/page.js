@@ -37,13 +37,13 @@ export default function Home() {
     return (
         <div>
             {/* Hero Section */}
-            <div className="relative h-full">
+            <div className="relative h-[50vh] md:h-full">
                 <video
                     autoPlay
                     loop
                     muted
                     playsInline
-                    className="absolute top-0 left-0 h-[50vh] w-full md:h-screen object-cover z-10"
+                    className="absolute top-0 left-0 w-full md:h-screen object-cover z-10"
                 >
                     <source src="/videos/background4.mp4" type="video/mp4" />
                     Tu navegador no soporta videos.
@@ -52,7 +52,7 @@ export default function Home() {
             </div>
 
             {/* Section with Animated Text for Transform */}
-            <div ref={transformRef} className="relative h-[50vh] md:h-screen">
+            <div ref={transformRef} className="relative h-[50vh] md:h-screen"> {/* flex items-center justify-center */}
                 <video
                     autoPlay
                     loop
