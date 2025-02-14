@@ -57,28 +57,28 @@ export default function Navbar() {
     };
 
     return (
-        <div className="absolute top-0 right-0 z-30">
+        <div className="fixed top-0 right-0 z-30">
             {/* Hamburger Button */}
             <motion.div
-                className="p-4 cursor-pointer z-40"
+                className="p-8 cursor-pointer z-40"
                 onClick={() => setIsOpen(!isOpen)}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
             >
                 <div
-                    className={`w-8 h-1 bg-white mb-2 transition-transform ${isOpen ? "rotate-45 translate-y-2.5" : ""}`}
+                    className={`w-10 h-1 bg-white mb-2 transition-transform ${isOpen ? "rotate-45 translate-y-2.5" : ""}`}
                 ></div>
                 <div
-                    className={`w-8 h-1 bg-white mb-2 ${isOpen ? "opacity-0" : "opacity-100"}`}
+                    className={`w-10 h-1 bg-white mb-2 ${isOpen ? "opacity-0" : "opacity-100"}`}
                 ></div>
                 <div
-                    className={`w-8 h-1 bg-white ${isOpen ? "-rotate-45 -translate-y-2.5" : ""}`}
+                    className={`w-10 h-1 bg-white ${isOpen ? "-rotate-45 -translate-y-2.5" : ""}`}
                 ></div>
             </motion.div>
 
             {/* Side Menu */}
             <motion.div
-                className="fixed top-0 right-0 w-2/6 h-full bg-black bg-opacity-90 flex flex-col justify-center items-start pl-10"
+                className="fixed top-0 right-0 w-3/4 md:w-2/6 h-full bg-black bg-opacity-90 flex flex-col justify-center items-start pl-10"
                 variants={menuVariants}
                 animate={isOpen ? "open" : "closed"}
                 initial="closed"
