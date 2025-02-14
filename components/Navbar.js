@@ -134,8 +134,7 @@ export default function Navbar() {
                         Us
                     </motion.a>
                     <motion.a
-                        href="#"
-                        onClick={() => handleScrollToSection("contact-section", event)}
+                        href="/contact"
                         variants={linkVariants}
                         custom={2}
                         className="text-red-500 font-bold text-3xl tracking-wide cursor-pointer"
@@ -144,6 +143,7 @@ export default function Navbar() {
                     >
                         Contact
                     </motion.a>
+
                 </nav>
             </motion.div>
         </div>
