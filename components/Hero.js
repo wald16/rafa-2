@@ -29,7 +29,7 @@ export default function Hero() {
 
             {/* Logo principal (grande) */}
             <div
-                className={`${isVisible ? "absolute z-10 pointer-events-auto items-center" : "fixed z-[-1] pointer-events-none "
+                className={`${isVisible ? "absolute z-10 pointer-events-auto items-center" : "fixed z-[-1] pointer-events-auto "
                     } ${isVisible
                         ? "top-1/5  md:top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[1.3]"
                         : "top-0 left-0 md:scale-[0.4] scale-[0.3] md:translate-x-[-20%] translate-x-[-25%] translate-y-[-20%]"
@@ -48,7 +48,7 @@ export default function Hero() {
             {/* Logo pequeño (oculto en móviles) */}
             {!isVisible && (
                 <div
-                    className="fixed top-7 left-8 md:left-12 z-50 opacity-0 md:block hidden" // Visible solo en pantallas >= md
+                    className="fixed top-7 left-8 md:left-12 z-50 opacity-0 md:block " // Visible solo en pantallas >= md
                 >
                     <Image
                         src="/images/logo-blanco.png"
