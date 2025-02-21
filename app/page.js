@@ -60,18 +60,18 @@ export default function Home() {
 
 
             {/* Transform Section */}
-            <div ref={transformRef} className="relative h-full md:h-screen">
+            <div ref={transformRef} className="relative h-[100vh]">
                 <video
                     autoPlay
                     loop
                     muted
                     playsInline
-                    className="absolute top-0 left-0 w-full h-screen object-cover -z-10"
+                    className="absolute top-0 left-0 w-screen h-full object-cover scale-y-110 -z-10"
                 >
                     <source src="/videos/background5.mp4" type="video/mp4" />
                     Tu navegador no soporta videos.
                 </video>
-                <div className="relative z-10 flex items-center justify-center h-screen md:h-full">
+                <div className="relative z-10 flex items-center justify-center h-screen md:h-screen">
                     <AnimatePresence mode="wait">
                         {showTransform ? (
                             <motion.div
@@ -150,9 +150,9 @@ export default function Home() {
             </div>
 
             {/* Red Section */}
-            <div className="relative bg-red-600 py-10 px-6 text-left">
+            <div className="relative bg-[rgb(255,0,0)] py-40 px-6 text-left">
                 <div className="container mx-auto">
-                    <h2 className="text-white text-3xl md:text-5xl font-bold leading-none">
+                    <h2 className="text-white text-6xl md:text-5xl font-bold leading-none">
                         Lorem Ipsum amb<br />
                         la rabla al consequat
                     </h2>
@@ -171,34 +171,59 @@ export default function Home() {
                     loop
                     muted
                     playsInline
-                    className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+                    className="absolute top-0 left-0 w-full h-full object-cover scale-y-110 -z-10"
                 >
                     <source src="/videos/background6.mp4" type="video/mp4" />
                     Tu navegador no soporta videos.
                 </video>
             </div>
 
+
+            {/* We Do Section */}
+            <div className="bg-black py-20 px-10 md:px-40 text-left">
+                <h2 className="text-[rgb(255,0,0)] text-7xl md:text-[9rem] font-extrabold tracking-tight">We do</h2>
+                <p className="text-[rgb(255,0,0)] text-lg md:text-3xl font-medium leading-relaxed mr-[200px]">
+                    Lorem ipsum amb al rabia magnis dis parturient montes, nascetur ridiculus mus donec qu felis donec pede justo,
+                    fringilla vel, aliquet nec, vulputate. Eget, arcu. In enim justo, rhonc Aenean eleifend tellus enean leo ligula,
+                    porttitor eu consequat vitae eleifend ac amb la rabia al consequats.
+                </p>
+            </div>
+
+
+
             {/* Team Section */}
-            <div id="us-section" className="us-section bg-black py-10 px-8">
-                <h2 className="text-7xl md:text-8xl text-red-500 font-extrabold text-left mb-8">Us</h2>
-                <div className="team-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-                    {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => (
-                        <div key={num} className="team-member text-left">
+            <div id="us-section" className="us-section bg-black py-10 px-40">
+                <h2 className="text-7xl md:text-[9rem] text-[rgb(255,0,0)] font-extrabold">Us</h2>
+            </div>
+            <div id="us-section" className="us-section bg-black py-10 px-60">
+                <div className="team-container grid grid-cols-2 md:grid-cols-4 gap-20">
+                    {[
+                        { id: 1, name: "Cristian Pastrian", desc: "Experto en desarrollo web y UI/UX." },
+                        { id: 2, name: "Paulo Lorems", desc: "Especialista en branding y diseño gráfico." },
+                        { id: 3, name: "Rafael Pastrian", desc: "Desarrollador Full Stack con enfoque en React." },
+                        { id: 4, name: "Juana Pérez", desc: "Diseñadora de experiencia de usuario." },
+                        { id: 5, name: "Ana González", desc: "Fotógrafa y creadora de contenido visual." },
+                        { id: 6, name: "Miguel Torres", desc: "Desarrollador de aplicaciones móviles." },
+                        { id: 7, name: "Laura Méndez", desc: "Especialista en ilustración digital." },
+                        { id: 8, name: "Carlos Ramírez", desc: "Estratega en marketing digital." }
+                    ].map((person) => (
+                        <div key={person.id} className="team-member text-left">
                             <Image
-                                src={`/images/person${num}.jpg`}
-                                alt={`Persona ${num}`}
-                                className="w-full rounded-lg mb-4"
+                                src={`/images/person${person.id}.jpg`}
+                                alt={person.name}
+                                className="w-full aspect-[4/3] object-cover rounded-lg mb-4"
                                 width={300}
                                 height={300}
                             />
-                            <h3 className="text-red-500 text-xl md:text-2xl font-bold mb-2">Persona {num}</h3>
-                            <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-                                Lorem ipsum amb al rabia magnis dis parturient montes, nascetur ridiculus mus.
+                            <h3 className="text-red-500 text-xl md:text-2xl font-bold mb-2">{person.name}</h3>
+                            <p className="text-gray-400 text-sm md:text-base leading-relaxed">
+                                {person.desc}
                             </p>
                         </div>
                     ))}
                 </div>
             </div>
+
         </div>
     );
 }
